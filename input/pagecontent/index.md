@@ -4,3 +4,4 @@ An implementation guide for the models produced by the [CanShare Logical Modelle
 
 Currently these are the Logical Models only, but eventually they will
 include the FHIR profiles and extension definintions as well.
+

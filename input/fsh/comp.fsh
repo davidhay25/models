@@ -1,0 +1,30 @@
+Logical:	 Dhtest1
+Id:		 Dhtest1
+Title:		 "Dhtest1"
+
+* Demographics 0..1 BackboneElement "Demographics"
+  * Nhi 1..1 Identifier "A unique identifier assigned to a person by the NHI system."
+  * NZName 0..1 BackboneElement "A person’s name details"
+    * Title 0..1 CodeableConcept "The ‘Title (prefix)’ is an honorific form of address preceding a name, used when addressing a person"
+    * GivenName 0..1 string "The person’s forename or given name at birth"
+    * OtherGivenName 0..* string "The person’s other given names or middle name and initials, but not the family name at birth"
+    * FamilyName 0..1 string "The family name (surname) of a person as distinct from their given, second and subsequent name(s)"
+    * NameProtectionFlag 0..1 CodeableConcept "This indicator denotes that the person’s name information is to be held ‘in confidence’"
+  * BirthdatePlace 0..1 BackboneElement "A person’s birth details"
+    * DOB 0..1 date "The date on which the person was born"
+  * Age 0..1 integer "The age of the patient at the time the data was recorded."
+  * Gender 0..1 CodeableConcept "A classification of the person's gender as self-identified by the person"
+  * Sex 0..1 CodeableConcept "A classification of the person's sex characteristics such as chromosomes, hormones and reproductive organs (Stats NZ Statistical standard for gender, sex, and variations of sex characteristics)."
+  * Ethnicity 0..* CodeableConcept "A classification of the ethnicity of an individual person as self-identified by the person"
+  * Ethnicity from https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code (preferred)
+  * Address 0..* BackboneElement "The person's current address or location details if known (in NZ CIQ address profile format."
+    * Type 0..1 CodeableConcept "The type of address, e.g. residential (physical), mailing (postal)"
+    * BuildingName 0..1 string "The name of the building or institution."
+    * StreetAddress1 0..1 string "The floor, unit and/or street address details."
+    * StreetAddress2 0..1 string "Other geographic information related to the address"
+    * Suburb 0..1 string "The name of the suburb or district within a city/town."
+    * City 0..1 string "PatientSummary.Address.City"
+    * City from https://nzhts.digital.health.nz/fhir/ValueSet/Thenameofthecityoftown. (preferred)
+    * Postcode 0..1 string "The numeric descriptor for a postal delivery area, aligned with the locality, suburb or place for this address."
+    * CountryCode 0..1 code "The two character ISO code that forms part of the address."
+    * AddressProtectedFlag 0..1 CodeableConcept "This indicator denotes that the person’s address information is to be held ‘in confidence’"

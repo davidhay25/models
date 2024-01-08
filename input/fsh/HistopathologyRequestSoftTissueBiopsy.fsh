@@ -4,7 +4,6 @@ Title:		 "Soft tissue (biopsy) - Histopathology request"
 Description:	 "A histopathology request form for soft tissue tumours from a biopsy specimen."
 
 * PatientDetails 1..1 BackboneElement "Patient details"
-* Administration 1..1 BackboneElement "Administration"
   * Patient 0..1 BackboneElement "A short summary of the main identifying details for a patient.."
     * Nhi 1..1 Identifier "A unique identifier assigned to a person by the NHI system."
     * NZName 0..1 BackboneElement "A person’s name details"
@@ -44,7 +43,7 @@ Description:	 "A histopathology request form for soft tissue tumours from a biop
       * DomicileCode 0..1 CodeableConcept "New Zealand health domicile code representing a person’s usual residential address"
       * PrimaryAddressFlag 0..1 CodeableConcept "An indicator used to denote that the address is the primary address for the person"
 
-* ClinicalInformation 1..1 BackboneElement "Clinical information"
+* Administration 1..1 BackboneElement "Administration"
   * Administration 1..1 BackboneElement "Administration details as seen on a pathology request form."
     * DocumentId 0..* Identifier "A version-independent identifier for the document"
     * LocalDocumentIdentifier 0..1 Identifier "A local identifier of the document that is unique only at the facility at which the document is created."
@@ -89,7 +88,7 @@ Description:	 "A histopathology request form for soft tissue tumours from a biop
     * TissueBankingConsent from https://nzhts.digital.health.nz/fhir/ValueSet/canshare-consent-details (preferred)
     * TissueReturnRequest 0..1 CodeableConcept "Whether or not the patient has requested to have their tissue returned to them, e.g. return, don't return, partial return."
 
-* Tumour 1..* BackboneElement "Tumour"
+* ClinicalInformation 1..1 BackboneElement "Clinical information"
   * ClinicalPresentation 0..1 BackboneElement "Relevant clinical symptoms or findings that the patient presents with, e.g.lump."
     * Status 1..1 CodeableConcept "The status of the observation"
     * Code 1..1 CodeableConcept "The type of observation made."
@@ -112,7 +111,7 @@ Description:	 "A histopathology request form for soft tissue tumours from a biop
     * Code from https://nzhts.digital.health.nz/fhir/ValueSet/canshare-observation (preferred)
     * Comments 0..1 string "Plain text comments about the observation."
 
-* Specimen 1..* BackboneElement "Specimen"
+* Tumour 1..* BackboneElement "Tumour"
   * Tumour 0..1 BackboneElement "An abnormal change and/or damage in a body structure or tissue."
     * TumourId 0..1 string "The number or identifier used to reference the given lesion/tumour."
     * TumourSite 0..1 BackboneElement "The body location of the lesion/tumour."
@@ -135,6 +134,7 @@ Description:	 "A histopathology request form for soft tissue tumours from a biop
       * Type 1..1 CodeableConcept "The type of dimension in which this measurement was taken, e.g. length, width, depth."
       * Size 1..1 Quantity "The size of the lesion in the given dimension."
 
+* Specimen 1..* BackboneElement "Specimen"
   * Specimen 0..1 BackboneElement "A sample to be used for analysis."
     * Id 0..* Identifier "An identifier for the specimen, e.g. a barcode."
     * Category 0..1 CodeableConcept "The category of specimen, e.g. biopsy specimen"

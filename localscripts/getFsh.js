@@ -21,7 +21,7 @@ async function getCompProfiles() {
         
         //save the profiles
         if (entry.fsh) {
-            profileFileContents = profileFileContents + "\n" + entry.fsh
+            profileFileContents = profileFileContents + "\n" + entry.fsh + "\n" 
         }
        
     }

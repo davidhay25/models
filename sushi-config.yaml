@@ -6,8 +6,8 @@
 id: fhir.example
 canonical: http://example.org
 name: models
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: CanShare models
+description: Logical Models and Profiles developed by the CanShare project
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -16,9 +16,9 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: http://example.org/example-publisher
-  # email: test@example.org
+  name: David hay
+  # url: http://example.org/example-publisher
+  email: david.hay25@gmail.com
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -76,8 +76,15 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  Structure: structure.html
+  LIM structure: structure.html
+  Compositions models: compLMIndex.html
+  Composition profiles: compositionProfileIndex.html
+  DataGroup models: dgLMIndex.html
+  DataGroup profiles: dgProfileIndex.html
+  Extensions: extensionIndex.html
+ 
+  All artifacts: artifacts.html
+  Downloads : full-ig.zip
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

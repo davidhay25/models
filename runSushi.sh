@@ -1,21 +1,29 @@
 
+echo "Updating from the LIM"
+localScripts/getFsh.js
+
+
 sushi  -s -o .
 
 if [[ $? -eq 0 ]]
 then
 
 
-#echo "Create the mapping file for ActNowReview"
-#localscripts/makeLMMapping.js ActNowReview
+echo "Creating Compositions LM summary pages..."
+localScripts/makeCompositionLMSummary.js
 
-# echo "Add fullUrl to example bundles"
-# localscripts/addFullUrlToBundle.js
+echo 
+echo "Creating Extensions summary pages..."
+localScripts/makeExtensionSummary.js
 
-echo "Creating Profiles and extensions summary pages..."
-./localScripts/makeProfilesAndExtensions.js cs-actnow
+echo "Creating Composition Profiles summary pages..."
+localScripts/makeCompositionProfileSummary.js
 
-echo "Making terminology summary"   # will copy into IG input folder
-../scripts/makeTerminologySummary.js cs-actnow
+echo "Creating DG Profiles summary pages..."
+localScripts/makeDGProfileSummary.js
+
+echo "Creating DG models summary pages..."
+localScripts/makeDGLMSummary.js
 
 echo
 
